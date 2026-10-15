@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Flight Finder</string>
+    <string name="screen_title">Быстрый поиск рейсов</string>
+    <string name="screen_subtitle">Ну и куда нам захотелось?</string>
+    <string name="departure_city">Город вылета</string>
+    <string name="arrival_city">Город прилёта</string>
+    <string name="dates_label">Даты поездки</string>
+    <string name="departure_date_hint">Вылет</string>
+    <string name="arrival_date_hint">Прилёт</string>
+    <string name="passengers_label">Пассажиры</string>
+    <string name="adults">Взрослые</string>
+    <string name="children">Дети</string>
+    <string name="search_button">Найти билеты</string>
+    <string name="choose_departure_date">Выберите дату вылета</string>
+    <string name="choose_arrival_date">Выберите дату прилёта</string>
+    <string name="search_summary">Поиск: %1$s → %2$s\nДаты: %3$s — %4$s\nПассажиры: взрослых — %5$d, детей — %6$d</string>
+    <string-array name="cities">
+        <item>Иркутск</item>
+        <item>Москва</item>
+        <item>Сочи</item>
+        <item>Санкт-Петербург</item>
+        <item>Екатеринбург</item>
+        <item>Казань</item>
+        <item>Новосибирск</item>
+        <item>Махачкала</item>
+        <item>Краснодар</item>
+    </string-array>
+</resources>

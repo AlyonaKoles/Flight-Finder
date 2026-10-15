@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F3F6FB">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/screen_title"
+            android:textColor="#423189"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/screen_subtitle"
+            android:textColor="#543eaf"
+            android:textSize="14sp"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/departure_city"
+            android:textColor="#25324A"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <Spinner
+            android:id="@+id/spinnerDeparture"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:entries="@array/cities"
+            android:backgroundTint="#D6DEEA"
+            android:paddingHorizontal="8dp"
+            android:contentDescription="@string/departure_city" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/arrival_city"
+            android:textColor="#25324A"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="6dp" />
+
+        <Spinner
+            android:id="@+id/spinnerArrival"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:entries="@array/cities"
+            android:backgroundTint="#D6DEEA"
+            android:paddingHorizontal="8dp"
+            android:contentDescription="@string/arrival_city" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dates_label"
+            android:textColor="#25324A"
+            android:textStyle="bold"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/editDepartureDate"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/field_background"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="@string/departure_date_hint"
+                android:inputType="none"
+                android:paddingHorizontal="12dp"
+                android:textColor="#14213D"
+                android:textColorHint="#7A879A"
+                android:drawableEnd="@android:drawable/ic_menu_my_calendar"
+                android:contentDescription="@string/departure_date_hint" />
+
+            <EditText
+                android:id="@+id/editArrivalDate"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/field_background"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="@string/arrival_date_hint"
+                android:inputType="none"
+                android:paddingHorizontal="12dp"
+                android:textColor="#14213D"
+                android:textColorHint="#7A879A"
+                android:drawableEnd="@android:drawable/ic_menu_my_calendar"
+                android:contentDescription="@string/arrival_date_hint" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/passengers_label"
+            android:textColor="#25324A"
+            android:textStyle="bold"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/adults"
+                    android:textColor="#68758A"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/editAdults"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/field_background"
+                    android:contentDescription="@string/adults"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:padding="8dp"
+                    android:selectAllOnFocus="true"
+                    android:text="1"
+                    android:textColor="#14213D" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/children"
+                    android:textColor="#68758A"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/editChildren"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/field_background"
+                    android:contentDescription="@string/children"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:padding="8dp"
+                    android:selectAllOnFocus="true"
+                    android:text="0"
+                    android:textColor="#14213D" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonSearch"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="28dp"
+            android:backgroundTint="#A436FF"
+            android:text="@string/search_button"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="50dp" />
+
+        <TextView
+            android:id="@+id/textSearchResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="#25324A"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</ScrollView>
